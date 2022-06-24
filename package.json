@@ -8,6 +8,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node dist/src/app",
+    "build": "tsc",
     "postinstall": "tsc",
     "watch-node": "nodemon dist/src/app.js",
     "watch-ts": "tsc -w",
