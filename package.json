@@ -7,7 +7,9 @@
   "author": "sharkked <16328864+sharkked@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon ./src/app.ts",
+    "build": "tsc",
+    "start": "node ./dist/src/app",
+    "dev": "nodemon ./src/app",
     "lint": "eslint . --ext .ts",
     "prettier": "prettier --write 'src/**/*.{js,jsx,ts,tsx,vue}' --with-node-modules"
   },

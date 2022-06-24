@@ -1,19 +1,19 @@
 import { prop, Ref, getModelForClass } from "@typegoose/typegoose";
 
-class Guild {
+export class Guild {
   @prop({ index: true, unique: true, required: true })
   public id!: string;
 
   @prop({ ref: () => User })
-  public users: Ref<User>[];
+  public users!: Ref<User>[];
 }
 
-class User {
+export class User {
   @prop({ index: true, unique: true, required: true })
   public id!: string;
 
   @prop({ ref: () => Guild })
-  public guilds: Ref<User>[];
+  public guilds!: Ref<User>[];
 }
 
 export const GuildModel = getModelForClass(Guild, {

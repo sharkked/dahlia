@@ -10,6 +10,7 @@
     "outDir": "dist",
     "resolveJsonModule": true,
     "rootDir": ".",
+    "strict": true,
     "sourceMap": false,
     "target": "ESNext",
   },

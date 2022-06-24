@@ -18,7 +18,7 @@ client.once("ready", (c) => {
 
 client.on("messageCreate", (message) => {
   if (message.author.bot) return;
-  if (message.mentions.has(client.user)) {
+  if (client.user && message.mentions.has(client.user)) {
     message.reply("hiii");
   }
 });
