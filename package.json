@@ -39,7 +39,7 @@
   },
   "packageManager": "yarn@3.2.1",
   "engines": {
-    "node": "v18.x",
+    "node": "18.x",
     "yarn": "3.x"
   }
 }
