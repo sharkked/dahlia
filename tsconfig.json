@@ -14,5 +14,6 @@
     "sourceMap": false,
     "target": "ESNext",
   },
-  "include": [ "src/**/*.ts", "*.d.ts" ]
+  "include": ["src/**/*.ts", "*.d.ts"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }

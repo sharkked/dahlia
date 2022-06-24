@@ -9,11 +9,8 @@ export default {
   token: process.env.BOT_TOKEN,
   clientId: process.env.CLIENT_ID,
   guildId: process.env.GUILD_ID,
-  db: process.env.DB_URL ?? "mongodb://whoops",
+  db: process.env.MONGODB_URI,
   opts: {
-    intents: [
-      Intents.FLAGS.GUILDS,
-      Intents.FLAGS.GUILD_MESSAGES,
-    ],
+    intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
   },
 };
