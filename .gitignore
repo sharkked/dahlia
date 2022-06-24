@@ -30,6 +30,8 @@ test
 
 # Yarn PnP
 .yarn/*
-!.yarn/plugins
+!.yarn/cache
 !.yarn/releases
-.pnp.*
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
