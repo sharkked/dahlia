@@ -2,10 +2,10 @@
   "name": "dahlia",
   "version": "1.0.0",
   "description": "The only bot I'll ever need",
-  "main": "app.ts",
   "repository": "git@github.com:sharkked/dahlia.git",
   "author": "sharkked <16328864+sharkked@users.noreply.github.com>",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "start": "node dist/src/app",
     "build": "tsc",
@@ -39,6 +39,7 @@
   },
   "packageManager": "yarn@3.2.1",
   "engines": {
-    "node": "v18.x"
+    "node": "v18.x",
+    "yarn": "3.x"
   }
 }

@@ -1,9 +1,12 @@
-import { Client } from "discord.js";
+import fs from "fs";
 import mongoose from "mongoose";
+import { Client } from "discord.js";
 import config from "./config";
 import logger from "./tools/logger";
 
-// mongoose.connect(config.db)
+console.log(fs);
+
+mongoose.connect(config.db)
 
 // mongoose.connection
 //   .on('connected', () => logger.info(`Mongoose default connection open to ${config.db}`))
