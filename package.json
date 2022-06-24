@@ -7,8 +7,10 @@
   "author": "sharkked <16328864+sharkked@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
-    "start": "node ./dist/src/app",
+    "start": "node dist/src/app",
+    "postinstall": "tsc",
+    "watch-node": "nodemon dist/src/app.js",
+    "watch-ts": "tsc -w",
     "dev": "nodemon ./src/app",
     "lint": "eslint . --ext .ts",
     "prettier": "prettier --write 'src/**/*.{js,jsx,ts,tsx,vue}' --with-node-modules"
@@ -35,5 +37,8 @@
     "mongoose": "^6.4.0",
     "winston": "^3.8.0"
   },
-  "packageManager": "yarn@3.2.1"
+  "packageManager": "yarn@3.2.1",
+  "engines": {
+    "node": "v18.4.0"
+  }
 }
