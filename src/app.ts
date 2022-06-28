@@ -19,7 +19,7 @@ const eventFiles = fs.readdirSync(eventsPath).filter(file => file.match(/\.(t|j)
 for (const file of eventFiles) {
 	const filePath = path.join(eventsPath, file);
   import(filePath).then(({ default: event }) => {
-    console.log(event);
+    logger.info("Event: loaded " + event.name);
     if (event.once) {
       client.once(event.name, (...args) => event.execute(...args));
     } else {
