@@ -15,7 +15,7 @@ mongoose.connection
 const client = new Client(config.opts);
 
 const eventsPath = path.join(__dirname, 'events');
-const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.ts'));
+const eventFiles = fs.readdirSync(eventsPath).filter(file => file.match(/\.(t|j)s$/));
 for (const file of eventFiles) {
 	const filePath = path.join(eventsPath, file);
   import(filePath).then(({ default: event }) => {
