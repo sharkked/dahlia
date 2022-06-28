@@ -6,14 +6,11 @@ dotenv.config();
 
 export default {
   ...config,
-  token: process.env.BOT_TOKEN,
+  token: process.env.CLIENT_TOKEN,
   clientId: process.env.CLIENT_ID,
   guildId: process.env.GUILD_ID,
-  db: process.env.DB_URL ?? "mongodb://whoops",
+  db: process.env.MONGODB_URI,
   opts: {
-    intents: [
-      Intents.FLAGS.GUILDS,
-      Intents.FLAGS.GUILD_MESSAGES,
-    ],
+    intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
   },
 };
